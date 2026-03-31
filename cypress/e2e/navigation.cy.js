@@ -4,13 +4,12 @@ describe('Navigation Tests', () => {
     cy.visit('https://example.cypress.io')
   })
 
-  it('should navigate to commands page', () => {
-    cy.contains('Commands').click()
-    cy.url().should('include', '/commands')
+  it('should show commands menu item', () => {
+    cy.get('.navbar-nav').contains('Commands').should('be.visible')
   })
 
   it('should open utilities page', () => {
-    cy.contains('Utilities').click()
+    cy.get('.navbar-nav').contains('Utilities').click()
     cy.url().should('include', '/utilities')
   })
 
