@@ -1,19 +1,16 @@
-import LoginPage from "../pages/LoginPage";
-import NavigationPage from "../pages/NavigationPage";
+import LoginPage from '../pages/LoginPage'
 
 describe('Full Flow Test', () => {
+  it('should perform user journey', () => {
+    LoginPage.visit()
+    LoginPage.login('tomsmith', 'SuperSecretPassword!')
+    LoginPage.verifySuccessfulLogin()
 
-    it('should perform user journey', () => {
+    cy.origin('https://example.cypress.io', () => {
+      cy.visit('/')
 
-        // Login flow (your app)
-        LoginPage.visit()
-        LoginPage.login('admin', 'password')
-
-        // Navigation flow (example app)
-        cy.visit('https://example.cypress.io')
-
-        NavigationPage.clickMenuItem('utilities')
-        NavigationPage.verifyUrlIncludes('/utilities')
-
+      cy.get('.navbar-nav').contains('Utilities').click()
+      cy.url().should('include', '/utilities')
     })
-})        
+  })
+})       

@@ -1,9 +1,9 @@
 class LoginPage {
-
   elements = {
     username: '#username',
     password: '#password',
-    loginBtn: '#loginBtn'
+    loginBtn: 'button[type="submit"]',
+    successMessage: '#flash',
   }
 
   visit() {
@@ -26,6 +26,12 @@ class LoginPage {
     this.enterUsername(username)
     this.enterPassword(password)
     this.clickLogin()
+  }
+
+  verifySuccessfulLogin() {
+    cy.get(this.elements.successMessage)
+      .should('be.visible')
+      .and('contain', 'You logged into a secure area!')
   }
 }
 

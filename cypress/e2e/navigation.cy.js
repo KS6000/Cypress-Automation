@@ -1,3 +1,5 @@
+import NavigationPage from '../pages/NavigationPage'
+
 describe('Navigation Tests', () => {
 
   beforeEach(() => {
@@ -5,12 +7,12 @@ describe('Navigation Tests', () => {
   })
 
   it('should show commands menu item', () => {
-    cy.get('.navbar-nav').contains('Commands').should('be.visible')
+    NavigationPage.verifyMenuItemVisible('Commands')
   })
 
   it('should open utilities page', () => {
-    cy.get('.navbar-nav').contains('Utilities').click()
-    cy.url().should('include', '/utilities')
+    NavigationPage.clickMenuItem('Utilities')
+    NavigationPage.verifyUrlIncludes('/utilities')
   })
 
 })

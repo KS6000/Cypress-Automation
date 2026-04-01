@@ -1,18 +1,13 @@
 import LoginPage from '../pages/LoginPage'
 
 describe('Login Test', () => {
-
   it('should login successfully', () => {
+    const username = 'tomsmith'
+    const password = 'SuperSecretPassword!'
 
-    const username = 'admin'
-    const password = 'password'
-
-    LoginPage.visit()   
+    LoginPage.visit()
     LoginPage.login(username, password)
-
-    cy.contains('Welcome').should('be.visible')
-
+    LoginPage.verifySuccessfulLogin()
   })
-
 })
 
