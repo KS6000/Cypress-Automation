@@ -1,5 +1,7 @@
 # 🚀 Cypress Automation Framework
 
+[![Cypress Tests](https://github.com/KS6000/Cypress-Automation/actions/workflows/cypress.yml/badge.svg)](https://github.com/KS6000/Cypress-Automation/actions/workflows/cypress.yml)
+
 ## 📌 Overview
 
 This project is an end-to-end test automation framework built using **Cypress** and **JavaScript (ES6)**.
