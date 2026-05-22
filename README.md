@@ -13,6 +13,7 @@ It demonstrates real-world automation practices including:
 * ✅ Modular and reusable test design
 * ✅ CLI-based execution
 * ✅ Git-based version control
+* ✅ Automated CI/CD pipeline execution using GitHub Actions
 
 ---
 
@@ -22,6 +23,7 @@ It demonstrates real-world automation practices including:
 * JavaScript (ES6)
 * Node.js
 * Git & GitHub
+* GitHub Actions (CI/CD)
 
 ---
 
