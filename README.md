@@ -27,10 +27,7 @@ It demonstrates real-world automation practices including:
 
 ---
 
-## 📁 Project Structure
-
-```
-Cypress Automation/
+Cypress_Automation/
 │
 ├── cypress/
 │   ├── e2e/
@@ -47,10 +44,13 @@ Cypress Automation/
 │   ├── fixtures/
 │   └── support/
 │
+├── .github/
+│   └── workflows/
+│       └── cypress.yml
+│
 ├── cypress.config.js
 ├── package.json
 └── README.md
-```
 
 ---
 
