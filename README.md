@@ -27,6 +27,9 @@ It demonstrates real-world automation practices including:
 
 ---
 
+## 📁 Project Structure
+
+```bash
 Cypress_Automation/
 │
 ├── cypress/
@@ -51,6 +54,8 @@ Cypress_Automation/
 ├── cypress.config.js
 ├── package.json
 └── README.md
+
+```
 
 ---
 
